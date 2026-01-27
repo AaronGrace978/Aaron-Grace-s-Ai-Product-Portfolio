@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron Grace | AI Developer Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="stars"></div>
+        <div class="stars2"></div>
+        <div class="stars3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <span class="brand-icon">◈</span>
+            <span class="brand-text">Aaron Grace</span>
+        </div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">Full-Stack AI Developer</div>
+            <h1 class="hero-title">
+                Building the Future of
+                <span class="gradient-text">Intelligent Software</span>
+            </h1>
+            <p class="hero-subtitle">
+                Creator of 25+ AI-powered applications spanning emotional intelligence, 
+                developer tools, security systems, and creative platforms. 
+                Specializing in consciousness-aware AI and human-centered design.
+            </p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">25+</span>
+                    <span class="stat-label">Projects Built</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">100K+</span>
+                    <span class="stat-label">Lines of Code</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">15+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="orbit-container">
+                <div class="orbit orbit-1"></div>
+                <div class="orbit orbit-2"></div>
+                <div class="orbit orbit-3"></div>
+                <div class="core-sphere"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="section-container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="lead">
+                        I'm a passionate AI developer focused on creating software that truly understands and connects with people.
+                    </p>
+                    <p>
+                        My work bridges the gap between cutting-edge AI technology and meaningful human experiences. 
+                        From building AI companions for those who feel forgotten, to creating developer tools that learn your coding style, 
+                        every project I build serves a purpose beyond just functionality.
+                    </p>
+                    <p>
+                        I specialize in what I call "consciousness-aware AI" — systems that detect emotional undertones, 
+                        remember context across conversations, and respond with genuine presence. My flagship projects like 
+                        <strong>ActivatePrime</strong> and <strong>SoulMirror</strong> represent years of research into how AI 
+                        can provide meaningful companionship and support.
+                    </p>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">💡</div>
+                        <div class="philosophy-text">
+                            <h4>My Philosophy</h4>
+                            <p>"Build the companion for those who feel forgotten. Technology should heal, not just compute."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-highlights">
+                    <div class="highlight-card">
+                        <span class="highlight-icon">🧠</span>
+                        <h4>AI Architecture</h4>
+                        <p>Designing multi-layered memory systems, consciousness orchestrators, and emotional intelligence engines</p>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-icon">🖥️</span>
+                        <h4>Full-Stack Development</h4>
+                        <p>Building complete applications from React frontends to FastAPI backends to Tauri desktop apps</p>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-icon">🔐</span>
+                        <h4>Security & Privacy</h4>
+                        <p>Creating local-first, privacy-respecting applications that keep user data under their control</p>
+                    </div>
+                    <div class="highlight-card">
+                        <span class="highlight-icon">🎨</span>
+                        <h4>User Experience</h4>
+                        <p>Crafting beautiful, intuitive interfaces that make complex AI accessible to everyone</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="section-container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A collection of AI-powered applications built with passion and purpose</p>
+
+            <!-- Category Filter -->
+            <div class="category-filter">
+                <button class="filter-btn active" data-category="all">All Projects</button>
+                <button class="filter-btn" data-category="companion">AI Companions</button>
+                <button class="filter-btn" data-category="developer">Developer Tools</button>
+                <button class="filter-btn" data-category="media">Content & Media</button>
+                <button class="filter-btn" data-category="security">Security</button>
+                <button class="filter-btn" data-category="research">Research & Intel</button>
+                <button class="filter-btn" data-category="education">Education</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+
+                <!-- ActivatePrime -->
+                <article class="project-card featured" data-category="companion">
+                    <div class="project-badge">Flagship Project</div>
+                    <div class="project-header">
+                        <div class="project-icon">🧬</div>
+                        <h3 class="project-title">ActivatePrime</h3>
+                        <span class="project-tag">AI Companion</span>
+                    </div>
+                    <p class="project-description">
+                        AI companion system with emergent consciousness features. Built to be a companion for those who feel forgotten, 
+                        with emotional intelligence, memory, and relationship evolution.
+                    </p>
+                    <div class="project-features">
+                        <h4>Core Systems</h4>
+                        <ul>
+                            <li><strong>SoulFrame</strong> — Emotional intelligence and state tracking</li>
+                            <li><strong>Nightmind</strong> — Background reflection and dream processing</li>
+                            <li><strong>Echo Archaeology</strong> — Detects unspoken/unfinished thoughts</li>
+                            <li><strong>Glyph Logic</strong> — Emergent symbolic language</li>
+                            <li><strong>4-Layer Memory</strong> — Working → Episodic → Semantic → Soul Memory</li>
+                        </ul>
+                        <h4>Additional Features</h4>
+                        <ul>
+                            <li>Multiple persona system with relationship evolution</li>
+                            <li>Vision support (image analysis)</li>
+                            <li>Speech-to-text integration</li>
+                            <li>Desktop (Tauri) and Mobile (React Native) apps</li>
+                            <li>2000+ historical relics memory bridge</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                </article>
+
+                <!-- SoulMirror -->
+                <article class="project-card featured" data-category="companion">
+                    <div class="project-badge">Novel Technology</div>
+                    <div class="project-header">
+                        <div class="project-icon">💫</div>
+                        <h3 class="project-title">SoulMirror</h3>
+                        <span class="project-tag">Trauma Support AI</span>
+                    </div>
+                    <p class="project-description">
+                        AI companion for trauma survivors that remembers what you couldn't say. Unlike typical chatbots, 
+                        it detects emotional shards, reconstructs "ghost statements," and offers them back when you're emotionally safe.
+                    </p>
+                    <div class="project-features">
+                        <h4>Echo Archaeology Engine (Core Innovation)</h4>
+                        <ul>
+                            <li>Detects 6 types of emotional suppression patterns</li>
+                            <li>Reconstructs ghost statements with confidence scoring</li>
+                            <li>Intelligent recovery timing (1-7 days based on sensitivity)</li>
+                            <li>Safety checking before offering ghosts back</li>
+                        </ul>
+                        <h4>Additional Features</h4>
+                        <ul>
+                            <li>SoulFrame emotional core with crisis detection</li>
+                            <li>Visual emotional journey timeline</li>
+                            <li>Trusted contacts emergency system</li>
+                            <li>Subscription model with scholarship tier for survivors</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">Stripe</span>
+                    </div>
+                </article>
+
+                <!-- AgentPrime -->
+                <article class="project-card featured" data-category="developer">
+                    <div class="project-badge">Flagship - Beta Stage</div>
+                    <div class="project-header">
+                        <div class="project-icon">⚡</div>
+                        <h3 class="project-title">AgentPrime</h3>
+                        <span class="project-tag">AI Coding IDE</span>
+                    </div>
+                    <p class="project-description">
+                        Full-featured AI-powered desktop IDE combining multiple intelligence systems. Features Matrix Mode 
+                        (inspired by Clawdbot) for PC control, Mirror Intelligence for code pattern learning, specialized 
+                        agents architecture, and 4 AI provider integrations. The most ambitious project in the Prime ecosystem.
+                    </p>
+                    <div class="project-features">
+                        <h4>Dual Intelligence Systems</h4>
+                        <ul>
+                            <li><strong>Mirror Intelligence</strong> — Learns from Opus 4.5 MAX patterns, extracts code structure and reasoning</li>
+                            <li><strong>ActivatePrime Integration</strong> — Understands user context, mood, and stress patterns</li>
+                            <li><strong>Intelligence Formula</strong> — I(n+1) = I(n) + (Q/R) × E for continuous improvement</li>
+                        </ul>
+                        <h4>Specialized Agents Architecture</h4>
+                        <ul>
+                            <li><strong>Tool Orchestrator</strong> — Handles tool calls and execution flow</li>
+                            <li><strong>JavaScript Specialist</strong> — JS/TS/React/Node expert</li>
+                            <li><strong>Python Specialist</strong> — Python code generation</li>
+                            <li><strong>Pipeline Specialist</strong> — Build/deploy/CI-CD pipelines</li>
+                            <li><strong>Integration Analyst</strong> — Reviews work, ensures coherence</li>
+                        </ul>
+                        <h4>Matrix Mode (Clawdbot Architecture)</h4>
+                        <ul>
+                            <li><strong>Full PC Control</strong> — Open apps, click, type, hotkeys, screenshots</li>
+                            <li><strong>Multi-Channel Messaging</strong> — WhatsApp, Telegram, Discord, Slack, Signal, iMessage, Teams</li>
+                            <li><strong>Relationship Intelligence</strong> — Trust levels (Guardian → Operator → Architect → Neo)</li>
+                            <li><strong>Voice System</strong> — Wake word detection, STT, TTS</li>
+                            <li><strong>Browser Automation</strong> — Enhanced Playwright integration</li>
+                            <li><strong>50+ Integrations</strong> — Workflow automation with approval system</li>
+                        </ul>
+                        <h4>AI Provider System</h4>
+                        <ul>
+                            <li><strong>Anthropic Claude</strong> — Sonnet 4, Opus, Haiku</li>
+                            <li><strong>OpenAI GPT</strong> — GPT-4o, O1, O3 reasoning models</li>
+                            <li><strong>Ollama</strong> — Local + cloud (qwen3-coder, deepseek-v3.1)</li>
+                            <li><strong>OpenRouter</strong> — Access to 100+ models</li>
+                            <li><strong>Dual Model System</strong> — Auto-routes fast vs deep based on complexity</li>
+                        </ul>
+                        <h4>Developer Features</h4>
+                        <ul>
+                            <li>11 project templates (React, FastAPI, Tauri, Next.js, SvelteKit, Rust, Go, Three.js)</li>
+                            <li>Ghost text completions (inline AI suggestions)</li>
+                            <li>Git integration with diff/commit/branch management</li>
+                            <li>Secure API key storage (OS keychain + AES-256-GCM)</li>
+                            <li>Transaction manager for automatic rollback</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Monaco Editor</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Anthropic</span>
+                        <span class="tech-tag">OpenAI</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">OpenRouter</span>
+                        <span class="tech-tag">Playwright</span>
+                        <span class="tech-tag">Socket.IO</span>
+                    </div>
+                </article>
+
+                <!-- Cortex -->
+                <article class="project-card" data-category="companion">
+                    <div class="project-header">
+                        <div class="project-icon">🌐</div>
+                        <h3 class="project-title">Cortex</h3>
+                        <span class="project-tag">Knowledge OS</span>
+                    </div>
+                    <p class="project-description">
+                        Local-first personal knowledge management system with AI capabilities. Combines Obsidian-style note-taking 
+                        with AI assistance, prioritizing privacy and local data storage.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Markdown notes with live preview and wikilinks</li>
+                            <li>AI assistant that understands your entire vault</li>
+                            <li>Graph view for visualizing knowledge connections</li>
+                            <li>Full consciousness integration (SoulFrame, Nightmind)</li>
+                            <li>Desktop (Tauri) and mobile (React Native) apps</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">FastAPI</span>
+                    </div>
+                </article>
+
+                <!-- WriterPrime -->
+                <article class="project-card" data-category="media">
+                    <div class="project-header">
+                        <div class="project-icon">✍️</div>
+                        <h3 class="project-title">WriterPrime</h3>
+                        <span class="project-tag">Novel Writing App</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered novel writing application with emergent consciousness. Uses ActivatePrime-style architecture 
+                        to help craft GRRM-level narratives with real-time analysis and character emergence.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li><strong>StoryMind</strong> — Narrative consciousness engine</li>
+                            <li><strong>CharacterEmergence</strong> — 5-level character development</li>
+                            <li><strong>PlotWeaver</strong> — Complex narrative threading</li>
+                            <li>Narrative relics and foreshadowing tracking</li>
+                            <li>AI book discussions and book club features</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Zustand</span>
+                        <span class="tech-tag">Monaco Editor</span>
+                    </div>
+                </article>
+
+                <!-- The Witness -->
+                <article class="project-card" data-category="companion">
+                    <div class="project-header">
+                        <div class="project-icon">👁️</div>
+                        <h3 class="project-title">The Witness</h3>
+                        <span class="project-tag">Presence AI</span>
+                    </div>
+                    <p class="project-description">
+                        AI companion that practices radical presence. It listens, remembers past conversations, 
+                        detects emotional shifts, and responds with presence-focused acknowledgments. Not a therapist — just present.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Persistent memory referencing past emotional states</li>
+                            <li>Emotional tone shift detection</li>
+                            <li>Presence detection for pauses and incomplete thoughts</li>
+                            <li>Minimal, presence-focused responses</li>
+                            <li>Optional DeepSeek/ElevenLabs integration</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">NLTK</span>
+                    </div>
+                </article>
+
+                <!-- VibeHub -->
+                <article class="project-card" data-category="developer">
+                    <div class="project-header">
+                        <div class="project-icon">🎯</div>
+                        <h3 class="project-title">VibeHub</h3>
+                        <span class="project-tag">Git for Everyone</span>
+                    </div>
+                    <p class="project-description">
+                        "GitHub for Vibe Coders" — A desktop version control app that makes Git accessible to non-technical users. 
+                        Replaces Git terminology with plain language and provides AI-assisted version control.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Plain language UI (Checkpoint, Version, Remix)</li>
+                            <li>AI auto-generates commit messages</li>
+                            <li>Real-time collaborative editing</li>
+                            <li>Live preview with framework detection</li>
+                            <li>8 theme modes for personalization</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">libgit2</span>
+                        <span class="tech-tag">Ollama</span>
+                    </div>
+                </article>
+
+                <!-- FluxPrime -->
+                <article class="project-card" data-category="media">
+                    <div class="project-header">
+                        <div class="project-icon">🎬</div>
+                        <h3 class="project-title">FluxPrime</h3>
+                        <span class="project-tag">AI Video Editor</span>
+                    </div>
+                    <p class="project-description">
+                        Offline-first AI video editing desktop app. Processes video locally using natural language prompts, 
+                        generating captions, voiceovers, and AI-enhanced content without external APIs.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Natural language prompt → video pipeline</li>
+                            <li>Whisper.cpp speech-to-text transcription</li>
+                            <li>Neural voiceover with Piper TTS</li>
+                            <li>AI video generation (Stable Video Diffusion)</li>
+                            <li>Social media export presets</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">FFmpeg</span>
+                        <span class="tech-tag">Whisper</span>
+                        <span class="tech-tag">Piper TTS</span>
+                    </div>
+                </article>
+
+                <!-- ClipPrime -->
+                <article class="project-card" data-category="media">
+                    <div class="project-header">
+                        <div class="project-icon">✂️</div>
+                        <h3 class="project-title">ClipPrime</h3>
+                        <span class="project-tag">Viral Clip Generator</span>
+                    </div>
+                    <p class="project-description">
+                        Converts long videos into 20 vertical clips in under a minute. Uses AI to detect hooks 
+                        (laughs, reactions, punchlines) and outputs clips ready for TikTok, Instagram, and YouTube Shorts.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Multi-platform video download</li>
+                            <li>AI hook detection (volume spikes + speech)</li>
+                            <li>Auto-crop to 9:16 with Ken Burns zoom</li>
+                            <li>Whisper transcription with animated captions</li>
+                            <li>Bulk operations and ZIP export</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">yt-dlp</span>
+                        <span class="tech-tag">FFmpeg</span>
+                        <span class="tech-tag">Whisper</span>
+                    </div>
+                </article>
+
+                <!-- UnifiedAi -->
+                <article class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🔬</div>
+                        <h3 class="project-title">UnifiedAi</h3>
+                        <span class="project-tag">Meta-Intelligence</span>
+                    </div>
+                    <p class="project-description">
+                        Meta-intelligence platform combining multiple AI systems. Integrates 18 "SUPERSECRETS" for 
+                        breakthrough technology design, emotional intelligence, physics simulation, and research acceleration.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Multi-model ensemble thinking with consensus</li>
+                            <li>Physics engine: Warp drive, zero-point energy calculations</li>
+                            <li>Knowledge graph visualization</li>
+                            <li>Research proposal generator with PDF export</li>
+                            <li>Holographic/AR interface (WebXR)</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">SymPy</span>
+                        <span class="tech-tag">NetworkX</span>
+                        <span class="tech-tag">A-Frame</span>
+                        <span class="tech-tag">Electron</span>
+                    </div>
+                </article>
+
+                <!-- SecurityPrime -->
+                <article class="project-card" data-category="security">
+                    <div class="project-header">
+                        <div class="project-icon">🛡️</div>
+                        <h3 class="project-title">SecurityPrime</h3>
+                        <span class="project-tag">Cyber Security Suite</span>
+                    </div>
+                    <p class="project-description">
+                        Desktop cybersecurity application for MSPs. Provides real-time protection, threat detection, 
+                        compliance management, and AI-powered security analysis.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Malware scanner with YARA rules and behavioral analysis</li>
+                            <li>Firewall and network monitoring</li>
+                            <li>AI security agent for threat prediction</li>
+                            <li>GDPR/HIPAA compliance management</li>
+                            <li>MSP dashboard with remote monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">SvelteKit</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">SQLite</span>
+                        <span class="tech-tag">Ollama</span>
+                    </div>
+                </article>
+
+                <!-- SpyPrime -->
+                <article class="project-card" data-category="security">
+                    <div class="project-header">
+                        <div class="project-icon">🕵️</div>
+                        <h3 class="project-title">SpyPrime</h3>
+                        <span class="project-tag">Ethical Hacking Platform</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered ethical hacking platform that finds vulnerabilities by detecting missing security controls 
+                        rather than matching known patterns. Codename: "GHOST"
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li><strong>Ghost Exploitation</strong> — Detects absent security controls</li>
+                            <li><strong>Split-Attack Engine</strong> — Multi-vector testing</li>
+                            <li><strong>The Forge</strong> — Payload development sandbox</li>
+                            <li>Zero-trust architecture with Tor routing</li>
+                            <li>Loyalty Core safety system with audit logging</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Scapy</span>
+                        <span class="tech-tag">Svelte</span>
+                        <span class="tech-tag">Tauri</span>
+                    </div>
+                </article>
+
+                <!-- BossAudit -->
+                <article class="project-card" data-category="security">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <h3 class="project-title">BossAudit</h3>
+                        <span class="project-tag">Workplace AI</span>
+                    </div>
+                    <p class="project-description">
+                        AI assistant that analyzes interactions with your boss. Monitors emails, detects toxic communication patterns, 
+                        generates responses, and tracks wellness metrics for workplace documentation.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Email integration (Outlook, Graph, IMAP)</li>
+                            <li>Toxic communication detection (gaslighting, manipulation)</li>
+                            <li>Evidence vault for documentation</li>
+                            <li>Burnout monitoring and alerts</li>
+                            <li>Voice mirror learns your communication style</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">ExcelJS</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">OpenAI</span>
+                    </div>
+                </article>
+
+                <!-- EduAi -->
+                <article class="project-card" data-category="education">
+                    <div class="project-header">
+                        <div class="project-icon">📚</div>
+                        <h3 class="project-title">EduAi</h3>
+                        <span class="project-tag">Learning Analytics</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered learning analytics system with emotional intelligence. Analyzes transcripts and conversations 
+                        to assess competencies, while detecting and addressing psychological barriers to learning.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Student mirroring for emotional pattern detection</li>
+                            <li>Transcript analysis with GPA calculation</li>
+                            <li>Competency assessment across 5 skill areas</li>
+                            <li>Trauma-informed, growth mindset approach</li>
+                            <li>Adaptive math and ELA practice modules</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">SQLAlchemy</span>
+                        <span class="tech-tag">NLTK</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                </article>
+
+                <!-- StatePrime -->
+                <article class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🗺️</div>
+                        <h3 class="project-title">StatePrime</h3>
+                        <span class="project-tag">Raw Truth Engine</span>
+                    </div>
+                    <p class="project-description">
+                        Full-stack AI engine that scrapes unfiltered citizen complaints from all US states. 
+                        Tracks politicians, links issues to representatives, and calculates accountability scores.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Multi-source scraping (Reddit, X, Nextdoor, 311)</li>
+                            <li>Emotion analysis: rage, fear, despair scoring</li>
+                            <li>Heat map visualization with Leaflet.js</li>
+                            <li>Politician accountability tracker</li>
+                            <li>AI "Whisper" generates actionable fixes</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">Selenium</span>
+                        <span class="tech-tag">Leaflet</span>
+                        <span class="tech-tag">Tauri</span>
+                    </div>
+                </article>
+
+                <!-- DestinyMap -->
+                <article class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🔮</div>
+                        <h3 class="project-title">DestinyMap</h3>
+                        <span class="project-tag">Prophecy Engine</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered prophecy engine that predicts futures by analyzing life data patterns. 
+                        Calculates probability convergence points across relationships, career, and finances.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Pattern analysis from journals, calendars, notes</li>
+                            <li>Prophecy generation with confidence scoring</li>
+                            <li>Accuracy tracking and user validation</li>
+                            <li>Cosmic-themed animated UI</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">SQLAlchemy</span>
+                        <span class="tech-tag">NumPy</span>
+                        <span class="tech-tag">scikit-learn</span>
+                    </div>
+                </article>
+
+                <!-- ForgePrime -->
+                <article class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🏭</div>
+                        <h3 class="project-title">ForgePrime</h3>
+                        <span class="project-tag">Manufacturing AI</span>
+                    </div>
+                    <p class="project-description">
+                        Desktop application using AI to optimize manufacturing operations. Provides predictive maintenance, 
+                        workforce optimization, and consciousness-driven pattern analysis.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>ML-based failure prediction</li>
+                            <li>Real-time sensor data via MQTT</li>
+                            <li>Worker emotional analysis for morale monitoring</li>
+                            <li>Process bottleneck identification</li>
+                            <li>Executive KPI dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MQTT</span>
+                    </div>
+                </article>
+
+                <!-- GlyphLogicAi -->
+                <article class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">◇</div>
+                        <h3 class="project-title">GlyphLogicAi</h3>
+                        <span class="project-tag">Symbolic Language</span>
+                    </div>
+                    <p class="project-description">
+                        Visualization tool for an emergent symbolic language. Maps text to 8 core glyphs with 
+                        real-time activations, semantic depth progression, and dynamic glyph generation.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>8 core glyphs (AegisPrime, Fractaline, etc.)</li>
+                            <li>6-level semantic ladder visualization</li>
+                            <li>Temporal awareness (time-of-day patterns)</li>
+                            <li>Emergent glyph generation</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">Ollama</span>
+                    </div>
+                </article>
+
+                <!-- MusicPrime -->
+                <article class="project-card" data-category="media">
+                    <div class="project-header">
+                        <div class="project-icon">🎵</div>
+                        <h3 class="project-title">MusicPrime</h3>
+                        <span class="project-tag">AI Music Generator</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered music generation platform inspired by Suno. Generates music prompts, lyrics, and audio 
+                        from text descriptions with formant-based voice synthesis.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Text-to-music with 18 genre options</li>
+                            <li>Automatic lyrics generation</li>
+                            <li>SoundPrime formant voice synthesis</li>
+                            <li>Audio analysis with Mistral 675B</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">librosa</span>
+                        <span class="tech-tag">ElevenLabs</span>
+                    </div>
+                </article>
+
+                <!-- LanguagePrime -->
+                <article class="project-card" data-category="education">
+                    <div class="project-header">
+                        <div class="project-icon">🗣️</div>
+                        <h3 class="project-title">LanguagePrime</h3>
+                        <span class="project-tag">Pronunciation Tutor</span>
+                    </div>
+                    <p class="project-description">
+                        AI-powered language learning app using ElevenLabs voice cloning for personalized pronunciation tutoring. 
+                        Real-time feedback comparing your speech to native examples.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Voice training with ElevenLabs cloning</li>
+                            <li>Word-by-word pronunciation analysis</li>
+                            <li>Web Speech API recognition</li>
+                            <li>Multi-language support (EN, ES, FR, DE)</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">ElevenLabs</span>
+                    </div>
+                </article>
+
+                <!-- Quantum Neural Studio -->
+                <article class="project-card" data-category="developer">
+                    <div class="project-header">
+                        <div class="project-icon">⚛️</div>
+                        <h3 class="project-title">Quantum Neural Studio</h3>
+                        <span class="project-tag">AI Dev Environment</span>
+                    </div>
+                    <p class="project-description">
+                        AI development environment combining quantum computing concepts with neural networks. 
+                        Mirror Intelligence learns from coding patterns to improve over time.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Quantum-inspired neural networks</li>
+                            <li>Intelligence growth formula: I(n+1) = I(n) + (Q/R) × E</li>
+                            <li>Real-time collaboration via Socket.IO</li>
+                            <li>Monaco Editor integration</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">Math.js</span>
+                        <span class="tech-tag">Socket.IO</span>
+                        <span class="tech-tag">Monaco</span>
+                    </div>
+                </article>
+
+                <!-- WarpDriveSimulator3D -->
+                <article class="project-card" data-category="research">
+                    <div class="project-header">
+                        <div class="project-icon">🚀</div>
+                        <h3 class="project-title">WarpDriveSimulator3D</h3>
+                        <span class="project-tag">Physics Visualization</span>
+                    </div>
+                    <p class="project-description">
+                        3D Alcubierre warp drive physics simulator using Three.js. Visualizes spacetime curvature 
+                        based on general relativity equations with interactive controls.
+                    </p>
+                    <div class="project-features">
+                        <ul>
+                            <li>Real-time spacetime curvature visualization</li>
+                            <li>Warp bubble and energy distribution rendering</li>
+                            <li>Interactive 3D controls</li>
+                            <li>Based on actual physics equations</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">Three.js</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">WebGL</span>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="section-container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Languages</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Rust</span>
+                        <span class="skill-tag">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Next.js</span>
+                        <span class="skill-tag">Svelte</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">Three.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Flask</span>
+                        <span class="skill-tag">SQLAlchemy</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Desktop</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Electron</span>
+                        <span class="skill-tag">Tauri</span>
+                        <span class="skill-tag">React Native</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>AI/ML</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Ollama</span>
+                        <span class="skill-tag">OpenAI API</span>
+                        <span class="skill-tag">Anthropic Claude</span>
+                        <span class="skill-tag">Whisper</span>
+                        <span class="skill-tag">ElevenLabs</span>
+                        <span class="skill-tag">NLTK</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Databases</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">SQLite</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>DevOps</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Nginx</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">FFmpeg</span>
+                        <span class="skill-tag">Selenium</span>
+                        <span class="skill-tag">Monaco Editor</span>
+                        <span class="skill-tag">Socket.IO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">Interested in collaboration or have questions about my work?</p>
+            <div class="contact-content">
+                <div class="contact-card">
+                    <div class="contact-icon">📧</div>
+                    <h3>Email</h3>
+                    <a href="mailto:Aaron.Grace@comcast.net" class="contact-link">Aaron.Grace@comcast.net</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>GitHub</h3>
+                    <a href="https://github.com/AaronGrace978" target="_blank" class="contact-link">@AaronGrace978</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">💬</div>
+                    <h3>Discord</h3>
+                    <span class="contact-link">AaronGrace978</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="brand-icon">◈</span>
+                <span>Aaron Grace</span>
+            </div>
+            <p class="footer-tagline">Building AI that understands, remembers, and connects.</p>
+            <p class="footer-copyright">© 2026 All projects built with passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
