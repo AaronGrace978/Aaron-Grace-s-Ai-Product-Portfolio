@@ -961,6 +961,81 @@ a.contact-link {
 }
 
 /* ===================================
+   MOBILE PROJECTS TOGGLE
+   =================================== */
+
+.mobile-projects-toggle {
+    display: none;
+    width: 100%;
+    padding: var(--spacing-lg) var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    background: var(--bg-card);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+}
+
+.mobile-projects-toggle:hover {
+    background: var(--bg-card-hover);
+    border-color: rgba(99, 102, 241, 0.5);
+    box-shadow: var(--shadow-glow);
+}
+
+.mobile-projects-toggle:active {
+    transform: scale(0.98);
+}
+
+.mobile-projects-toggle .toggle-icon {
+    display: inline-block;
+    transition: transform var(--transition-base);
+    font-size: 0.8rem;
+}
+
+.mobile-projects-toggle.expanded .toggle-icon {
+    transform: rotate(180deg);
+}
+
+/* Mobile: Hide projects grid by default, show toggle */
+@media (max-width: 768px) {
+    .mobile-projects-toggle {
+        display: flex;
+    }
+    
+    .projects-grid {
+        display: none;
+        opacity: 0;
+        transform: translateY(-20px);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    
+    .projects-grid.mobile-visible {
+        display: grid;
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    /* Also hide category filter on mobile until expanded */
+    .category-filter {
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .category-filter.mobile-visible {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+/* ===================================
    PROJECT MODAL - EXPANDED VIEW
    =================================== */
 
