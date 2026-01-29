@@ -142,7 +142,14 @@
                 <button class="filter-btn" data-category="security">Security</button>
                 <button class="filter-btn" data-category="research">Research & Intel</button>
                 <button class="filter-btn" data-category="education">Education</button>
+                <button class="filter-btn" data-category="finance">Finance</button>
             </div>
+
+            <!-- Mobile Toggle Button -->
+            <button class="mobile-projects-toggle" id="mobile-projects-toggle">
+                <span class="toggle-icon">▼</span>
+                <span class="toggle-text">Show Projects</span>
+            </button>
 
             <!-- Projects Grid -->
             <div class="projects-grid">
@@ -837,6 +844,51 @@
                         <span class="tech-tag">Three.js</span>
                         <span class="tech-tag">JavaScript</span>
                         <span class="tech-tag">WebGL</span>
+                    </div>
+                </article>
+
+                <!-- TaxPrime -->
+                <article class="project-card" data-category="finance">
+                    <div class="project-header">
+                        <div class="project-icon">💰</div>
+                        <h3 class="project-title">TaxPrime</h3>
+                        <span class="project-tag">Tax Assistant</span>
+                    </div>
+                    <p class="project-description">
+                        Privacy-focused desktop tax assistant built with Tauri. Helps users find legal tax-saving strategies, 
+                        manage tax documents securely with local encryption, and stay updated on tax law changes. All data stays on your device.
+                    </p>
+                    <div class="project-features">
+                        <h4>Core Features</h4>
+                        <ul>
+                            <li><strong>AI Tax Assistant</strong> — Chat interface powered by Ollama for tax questions</li>
+                            <li><strong>Document Vault</strong> — AES-256-GCM encrypted local storage for W2s, 1099s, receipts</li>
+                            <li><strong>Tax Law Scraper</strong> — Automatic IRS announcement tracking and updates</li>
+                            <li><strong>Strategy Finder</strong> — 25+ legal tax-saving strategies with IRS citations</li>
+                        </ul>
+                        <h4>Privacy & Security</h4>
+                        <ul>
+                            <li>100% local data storage — nothing leaves your device</li>
+                            <li>AES-256-GCM encryption with user-controlled passwords</li>
+                            <li>Supports local Ollama AI for fully offline operation</li>
+                            <li>Document categorization by type and tax year</li>
+                        </ul>
+                        <h4>Smart Recommendations</h4>
+                        <ul>
+                            <li>Personalized strategies based on income type (W-2, self-employed, investor)</li>
+                            <li>Filters for homeowners, dependents, student loans, marital status</li>
+                            <li>Complexity and risk level indicators for each strategy</li>
+                        </ul>
+                    </div>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Tauri</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">Zustand</span>
+                        <span class="tech-tag">Ollama</span>
+                        <span class="tech-tag">AES-GCM</span>
                     </div>
                 </article>
 
