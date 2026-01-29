@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarScrollEffect();
     initIntersectionObserver();
     initParallaxEffects();
+    initMobileProjectsToggle();
 });
 
 /* Project Category Filter */
@@ -388,3 +389,57 @@ document.querySelectorAll('.project-card:not(.modal-card) .project-features').fo
     features.style.position = 'relative';
     features.appendChild(fadeGradient);
 });
+
+/* Mobile Projects Toggle - Show/Hide projects on mobile */
+function initMobileProjectsToggle() {
+    const toggleBtn = document.getElementById('mobile-projects-toggle');
+    const projectsGrid = document.querySelector('.projects-grid');
+    const categoryFilter = document.querySelector('.category-filter');
+    
+    if (!toggleBtn || !projectsGrid) return;
+    
+    let isExpanded = false;
+    
+    toggleBtn.addEventListener('click', () => {
+        isExpanded = !isExpanded;
+        
+        if (isExpanded) {
+            // Show projects
+            projectsGrid.classList.add('mobile-visible');
+            if (categoryFilter) categoryFilter.classList.add('mobile-visible');
+            toggleBtn.classList.add('expanded');
+            toggleBtn.querySelector('.toggle-text').textContent = 'Hide Projects';
+            
+            // Scroll to projects section smoothly
+            setTimeout(() => {
+                projectsGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+        } else {
+            // Hide projects
+            projectsGrid.classList.remove('mobile-visible');
+            if (categoryFilter) categoryFilter.classList.remove('mobile-visible');
+            toggleBtn.classList.remove('expanded');
+            toggleBtn.querySelector('.toggle-text').textContent = 'Show Projects';
+        }
+    });
+    
+    // Check if we're on mobile and adjust visibility
+    function checkMobileState() {
+        const isMobile = window.innerWidth <= 768;
+        
+        if (!isMobile) {
+            // On desktop, always show projects
+            projectsGrid.classList.remove('mobile-visible');
+            if (categoryFilter) categoryFilter.classList.remove('mobile-visible');
+            toggleBtn.classList.remove('expanded');
+            toggleBtn.querySelector('.toggle-text').textContent = 'Show Projects';
+            isExpanded = false;
+        }
+    }
+    
+    // Check on resize
+    window.addEventListener('resize', checkMobileState);
+    
+    // Initial check
+    checkMobileState();
+}
