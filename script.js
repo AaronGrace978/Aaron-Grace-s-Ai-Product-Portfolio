@@ -70,10 +70,10 @@ function initNavbarScrollEffect() {
         
         // Add background on scroll
         if (currentScroll > 50) {
-            navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
+            navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.08)';
         } else {
-            navbar.style.background = 'rgba(10, 10, 15, 0.8)';
+            navbar.style.background = 'rgba(255, 255, 255, 0.9)';
             navbar.style.boxShadow = 'none';
         }
 
@@ -128,8 +128,8 @@ function initParallaxEffects() {
 const style = document.createElement('style');
 style.textContent = `
     section {
-        opacity: 0;
-        transform: translateY(30px);
+        opacity: 1;
+        transform: translateY(0);
         transition: opacity 0.6s ease, transform 0.6s ease;
     }
     
@@ -139,8 +139,8 @@ style.textContent = `
     }
     
     .project-card, .highlight-card, .skill-category, .contact-card {
-        opacity: 0;
-        transform: translateY(20px);
+        opacity: 1;
+        transform: translateY(0);
         transition: opacity 0.5s ease, transform 0.5s ease, background 0.25s ease, box-shadow 0.25s ease;
     }
     
