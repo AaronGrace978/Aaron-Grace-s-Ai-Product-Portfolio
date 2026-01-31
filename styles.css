@@ -574,6 +574,26 @@ body {
     opacity: 1;
 }
 
+/* Project card thumbnail - show first image only on card */
+.project-images {
+    margin: calc(-1 * var(--spacing-xl)) calc(-1 * var(--spacing-xl)) var(--spacing-lg) calc(-1 * var(--spacing-xl));
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    overflow: hidden;
+    height: 180px;
+    background: var(--bg-secondary);
+}
+
+.project-card .project-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-card .project-images img:not(:first-child) {
+    display: none;
+}
+
 .project-badge {
     position: absolute;
     top: var(--spacing-lg);
@@ -1193,6 +1213,47 @@ a.contact-link {
     color: var(--accent-primary);
 }
 
+/* Modal image gallery - show all project images */
+.modal-images {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-xl);
+    overflow-x: auto;
+    padding-bottom: var(--spacing-sm);
+    scroll-snap-type: x mandatory;
+}
+
+.modal-images::-webkit-scrollbar {
+    height: 6px;
+}
+
+.modal-images::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: var(--radius-full);
+}
+
+.modal-images::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+}
+
+.modal-images img {
+    flex: 0 0 auto;
+    width: 280px;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.modal-images img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
 .modal-description {
     font-size: 1.15rem;
     line-height: 1.8;
@@ -1258,6 +1319,75 @@ a.contact-link {
     gap: var(--spacing-sm);
 }
 
+/* Lightbox - expanded image view */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.92);
+    backdrop-filter: blur(8px);
+    cursor: pointer;
+}
+
+.lightbox-close {
+    position: absolute;
+    top: var(--spacing-lg);
+    right: var(--spacing-lg);
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 50%;
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    cursor: pointer;
+    z-index: 3001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    transition: background var(--transition-fast);
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.lightbox-img {
+    position: relative;
+    z-index: 3001;
+    max-width: 95vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: var(--radius-md);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+    animation: lightboxFadeIn 0.2s ease;
+}
+
+@keyframes lightboxFadeIn {
+    from { opacity: 0; transform: scale(0.98); }
+    to { opacity: 1; transform: scale(1); }
+}
+
 /* Click hint on cards */
 .project-card::after {
     content: 'Click to expand';
@@ -1276,6 +1406,11 @@ a.contact-link {
 
 /* Modal responsive */
 @media (max-width: 968px) {
+    .modal-images img {
+        width: 220px;
+        max-height: 140px;
+    }
+
     .modal-features {
         columns: 1;
     }

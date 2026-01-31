@@ -275,6 +275,10 @@ function openProjectModal(card) {
     const techEl = cardClone.querySelector('.project-tech');
     const techHTML = techEl ? techEl.innerHTML.trim() : '';
     
+    // Get project images HTML (for modal gallery)
+    const imagesEl = cardClone.querySelector('.project-images');
+    const imagesHTML = imagesEl ? imagesEl.innerHTML.trim() : '';
+    
     // Debug: Log extracted content
     console.log('Modal Content:', { title, description: description.substring(0, 50), featuresLength: featuresHTML.length, techLength: techHTML.length });
     
@@ -301,6 +305,7 @@ function openProjectModal(card) {
                         ${tag ? `<span class="modal-tag">${escapeHtml(tag)}</span>` : ''}
                     </div>
                 </div>
+                ${imagesHTML ? `<div class="modal-images">${imagesHTML}</div>` : ''}
                 <p class="modal-description">${escapeHtml(description)}</p>
                 <div class="modal-features">${featuresHTML}</div>
                 ${techHTML ? `<div class="modal-tech">
@@ -320,6 +325,15 @@ function openProjectModal(card) {
     
     if (backdrop) backdrop.addEventListener('click', closeProjectModal);
     if (closeBtn) closeBtn.addEventListener('click', closeProjectModal);
+    
+    // Click on modal images to expand (lightbox)
+    const modalImages = modal.querySelectorAll('.modal-images img');
+    modalImages.forEach(img => {
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openLightbox(img.src, img.alt);
+        });
+    });
     
     // Show modal with animation
     modal.classList.add('active');
@@ -355,15 +369,51 @@ function closeProjectModal() {
     }
 }
 
+/* Lightbox - expand image on click */
+function openLightbox(src, alt) {
+    let lightbox = document.getElementById('image-lightbox');
+    if (!lightbox) {
+        lightbox = document.createElement('div');
+        lightbox.id = 'image-lightbox';
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <div class="lightbox-backdrop"></div>
+            <button class="lightbox-close" aria-label="Close">&times;</button>
+            <img src="" alt="" class="lightbox-img">
+        `;
+        lightbox.querySelector('.lightbox-backdrop').addEventListener('click', closeLightbox);
+        lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+        document.body.appendChild(lightbox);
+    }
+    const img = lightbox.querySelector('.lightbox-img');
+    img.src = src;
+    img.alt = alt || 'Project screenshot';
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    const lightbox = document.getElementById('image-lightbox');
+    if (lightbox) {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+}
+
 /* Keyboard Navigation */
 document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-        const modal = document.getElementById('project-modal');
-        if (modal && modal.classList.contains('active')) {
-            closeProjectModal();
+        const lightbox = document.getElementById('image-lightbox');
+        if (lightbox && lightbox.classList.contains('active')) {
+            closeLightbox();
         } else {
-            // Reset filter to all if modal not open
-            document.querySelector('.filter-btn[data-category="all"]')?.click();
+            const modal = document.getElementById('project-modal');
+            if (modal && modal.classList.contains('active')) {
+                closeProjectModal();
+            } else {
+                // Reset filter to all if modal not open
+                document.querySelector('.filter-btn[data-category="all"]')?.click();
+            }
         }
     }
 });
